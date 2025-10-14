@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>ubuntu环境构建 - MA-vision-documentation</title>
+        <title>申请 - MA-vision-documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -175,58 +175,78 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ubuntu-environment"><a class="header" href="#ubuntu-environment">Ubuntu Environment</a></h1>
-<h2 id="1-目录"><a class="header" href="#1-目录">1. 目录</a></h2>
+                        <h1 id="申请考核"><a class="header" href="#申请考核">申请考核</a></h1>
+<h2 id="查找考核issue"><a class="header" href="#查找考核issue">查找考核issue</a></h2>
+<p>要完成一个考核，你需要在<a href="https://github.com/mechanical-ancestor/team-training/issues">考核文档仓库的Issue</a>里找到对应的考核Issue,</p>
+<p><img src="images/find-issue.png" alt="find-issue" /></p>
+<h2 id="创建子问题"><a class="header" href="#创建子问题">创建子问题</a></h2>
 <ul>
-<li><a href="#1ubuntu%E4%B8%ADc%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91-90-%E6%98%AF%E5%90%84%E4%B8%AA%E5%BA%93%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9">1.环境配置的一些经验</a></li>
-<li><a href="#3%E8%87%AA%E7%9E%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">2.自瞄环境配置</a></li>
+<li>
+<h3 id="考核仓库链接"><a class="header" href="#考核仓库链接">考核仓库链接</a></h3>
+</li>
 </ul>
-<h2 id="2环境配置的一些经验"><a class="header" href="#2环境配置的一些经验">2.环境配置的一些经验</a></h2>
-<h3 id="1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容"><a class="header" href="#1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容">1.ubuntu中c++环境配置遇到的坑 90% 是各个库版本不兼容</a></h3>
-<h3 id="2如何安装c库"><a class="header" href="#2如何安装c库">2.如何安装c++库</a></h3>
-<p>如果你学过cmake，就应该知道c++项目都是(应该80%以上的吧)通过cmake编译和管理的。如果你不了解cmake，可以参考<a href="">这里</a>。</p>
-<p>所以，如果你想安装c++库：</p>
-<h4 id="1源码安装"><a class="header" href="#1源码安装">1.源码安装：</a></h4>
-<p><span style="color: rgba(242, 0, 255, 0.79); text-decoration: underline;">思路和你编译运行c++程序一样，只是要先下载源码</span></p>
-<p>一般来说，c++库都有github仓库，你可以直接下载源码，然后编译安装。</p>
-<pre><code class="language-bash">git clone '库的github地址'
-</code></pre>
-<p>例子：</p>
-<pre><code class="language-bash">git clone https://github.com/opencv/opencv.git
-</code></pre>
-<p>进入源码目录，执行</p>
-<pre><code class="language-bash">mkdir build
-cd build
-cmake .. 
-make -j8 # 编译，-j8表示使用8个线程并行编译
-sudo make install # 安装到系统目录
-</code></pre>
-<h4 id="2包管理器安装"><a class="header" href="#2包管理器安装">2.包管理器安装：</a></h4>
-<p>如果你使用的是Ubuntu，你可以直接使用apt-get安装。</p>
-<pre><code class="language-bash">sudo apt-get install '库在apt-get中的名字'
-</code></pre>
-<p><span style="color: rgba(102, 255, 0, 0.84); text-decoration: underline;">注：apt-get安装的库一般都比较老，版本比较低，如果想用最新版本，可以参考源码安装。<br />
-名字不知道的话，可以问ai</span></p>
-<p>例子：</p>
-<pre><code class="language-bash">sudo apt-get install libopencv-dev
-</code></pre>
-<h3 id="3-如何跑开源项目"><a class="header" href="#3-如何跑开源项目">3. 如何跑开源项目</a></h3>
-<p>一般来说，开源项目都有详细的安装说明，你可以参考。
-在开源项目(github上)的readme中，一般都会有编译和运行的命令。</p>
-<p><span style="color: rgba(0, 162, 255, 0.7); text-decoration: underline;">思考： 在跑开源项目的时候，以及下面配置自瞄环境的时候 有各种不同的命令, 他们的作用是什么？，有其他方法吗？，相比于其他方法有什么优势(区别)</span></p>
-<h2 id="3自瞄环境配置"><a class="header" href="#3自瞄环境配置">3.自瞄环境配置</a></h2>
-<p>下面是老学长的环境配置（一点史，请见谅），可以参考：<br />
-<a href="https://github.com/Aubrey-xiang/environment_configuration.git">老学长的环境配置</a></p>
-
+<p><em><strong>可以看到在issue中有一个链接，指向考核几的仓库，正如下图中的</strong></em> <code>考核一</code></p>
+<ul>
+<li>
+<h3 id="尝试创建子问题"><a class="header" href="#尝试创建子问题">尝试创建子问题</a></h3>
+</li>
+</ul>
+<p>点击<code>Create sub-issue</code>按钮，再选择<code>Create sub-issue</code></p>
+<p><img src="images/create-sub-issue.png" alt="create-sub-issue" /></p>
+<ul>
+<li>
+<h3 id="选择模板"><a class="header" href="#选择模板">选择模板</a></h3>
+</li>
+</ul>
+<p><img src="images/choose-issue-template.png" alt="choose-issue-template" /></p>
+<ul>
+<li>
+<h3 id="填写子问题标题和姓名"><a class="header" href="#填写子问题标题和姓名">填写子问题标题和姓名</a></h3>
+</li>
+</ul>
+<p>根据模板提示填写即可</p>
+<p>最后点击<code>Create</code></p>
+<p><img src="images/creating-sub-issue.png" alt="creating-sub-issue" /></p>
+<h2 id="在子问题中创建分支"><a class="header" href="#在子问题中创建分支">在子问题中创建分支</a></h2>
+<p>找到并进入你刚刚创建的子问题，尝试在偏右下的地方找到并点击<code>Create a branch</code></p>
+<p><img src="images/create-branch-in-issue.png" alt="create-branch-in-issue" /></p>
+<p>注意一下几点：</p>
+<ul>
+<li>创建分支时，<code>Branch name</code>就是你要创建的分支的名称，写什么都行<sup class="footnote-reference" id="fr-name-1"><a href="#footnote-name">1</a></sup>，但要避免与其他人的分支名字冲突。</li>
+<li>Repository destination是目标仓库，也就是你的分支将被创建到的仓库，
+这里建议直接搜索<a href="#%E8%80%83%E6%A0%B8%E4%BB%93%E5%BA%93%E9%93%BE%E6%8E%A5">考核仓库</a>的全名<sup class="footnote-reference" id="fr-search-1"><a href="#footnote-search">2</a></sup>。</li>
+<li>Branch source是你要复制的分支，一般是main分支。</li>
+</ul>
+<p><img src="images/creating-branch.png" alt="creating-branch" /></p>
+<h2 id="进入分支完成考核"><a class="header" href="#进入分支完成考核">进入分支，完成考核</a></h2>
+<p>进入这个branch，在这里完成你的考核</p>
+<p><img src="images/choose-created-branch.png" alt="choose-created-branch" /></p>
+<h2 id="关闭子问题完成考核"><a class="header" href="#关闭子问题完成考核">关闭子问题，完成考核</a></h2>
+<p>完成后，先进入子问题，然后在<code>Add a comment</code>中写下你的考核完成情况，例如完成了什么</p>
+<p>然后点击<code>Close with comment</code>，即关闭问题。</p>
+<p><img src="images/close-issue.png" alt="close-issue" /></p>
+<h1 id="为什么考核要申请"><a class="header" href="#为什么考核要申请">为什么考核要申请</a></h1>
+<p>这是为了方便追踪每个人的考核进度，提高考核效率，
+也帮助每个人提前熟悉分工明确的开发流程。</p>
+<hr>
+<ol class="footnote-definition"><li id="footnote-name">
+<p>你上述创建的子问题已经包含了你的姓名，所以为了安全考虑，在创建其他东西例如分支和仓库等，你不需要再写自己的姓名。
+但为了避免与其他人的分支名字冲突，还是建议写上自己的姓名 <a href="#fr-name-1">↩</a></p>
+</li>
+<li id="footnote-search">
+<p>由于这里选择仓库不智能，搜索仓库名又会搜索到Github上所有的仓库，
+所以建议这里直接搜索仓库全名，即<code>仓库所有者名/仓库名</code>，例如<code>mechanical-ancestor/task_1</code> <a href="#fr-search-1">↩</a></p>
+</li>
+</ol>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../task/request-for-task.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../task/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../sentry/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../ubuntu_environment/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -236,11 +256,11 @@ sudo make install # 安装到系统目录
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../task/request-for-task.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../task/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../sentry/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../ubuntu_environment/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
