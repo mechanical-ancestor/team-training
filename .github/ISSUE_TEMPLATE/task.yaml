@@ -1,0 +1,16 @@
+name: 申请考核
+description: 申请参与考核
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        准备做这个考核?
+  - type: textarea
+    id: name
+    attributes:
+      label: 姓名
+      description: >
+        输入你的姓名
+    validations:
+      required: true
