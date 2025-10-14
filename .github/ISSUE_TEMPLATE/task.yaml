@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        准备做这个考核?
+        准备做这个考核? title建议写: 名字-考核几
   - type: textarea
     id: name
     attributes:
