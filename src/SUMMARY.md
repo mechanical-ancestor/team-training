@@ -8,6 +8,9 @@
         - [设置远程URL](github/set-git-remote-url.md)
     - [仓库](github/repository.md)
     - [问题跟踪](github/issues.md)
+- [考核](task/README.md)
+    - [申请](task/request-for-task.md)
+
 # 环境构建
 - [ubuntu环境构建](ubuntu_environment/README.md)
 
