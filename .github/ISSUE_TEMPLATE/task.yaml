@@ -17,7 +17,7 @@ body:
   - type: textarea
     id: which
     attributes:
-      label: 考核项目
+      label: 选择考核
       description: >
         输入你的你要做的考核，例如：考核一
     validations:
