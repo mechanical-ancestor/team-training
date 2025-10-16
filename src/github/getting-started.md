@@ -60,4 +60,10 @@ ssh-keygen
 ![添加新公钥](images/add-new-ssh-key.png)
 
 ## 加入组织
-todo
+ - 申请考核之前，是需要进入`mechanical-ancestor`组织的。
+
+ - 提供你的github账号，我们即可邀请你进入mechanical ancestor(MA视觉组织)
+
+ 你的github账号如下图所示：
+ ![github账号](images/github_account.png)
+
