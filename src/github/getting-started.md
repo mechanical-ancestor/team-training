@@ -13,8 +13,6 @@
 ### 为什么要设置ssh密钥
 我们知道，要推送修改到GitHub仓库，首先肯定要验证你是谁，这样才能知道你有没有权限。
 
-![用ssh协议Clone仓库](images/clone-https.png)
-
 下面介绍三种GitHub支持的验证方式
 - 密码认证
 - ssh密钥认证
@@ -31,6 +29,9 @@
 - 生成ssh密钥对
 - 将公钥上传到GitHub
 - 用ssh协议Clone仓库，或者[`设置远程推送URL`](set-git-remote-url.md)
+
+![用ssh协议Clone仓库](images/clone-ssh.png)
+
 ### 生成ssh密钥对
 在终端输入以下命令，生成ssh密钥对：
 ```sh
