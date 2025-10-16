@@ -5,12 +5,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        准备做这个考核? title建议写: 名字-考核几
+        准备做考核? title建议写: 名字-考核几
   - type: textarea
     id: name
     attributes:
       label: 姓名
       description: >
         输入你的姓名
+    validations:
+      required: true
+  - type: textarea
+    id: which
+    attributes:
+      label: 选择考核
+      description: >
+        输入你的你要做的考核，例如：考核一
     validations:
       required: true

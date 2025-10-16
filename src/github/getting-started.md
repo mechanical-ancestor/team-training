@@ -2,7 +2,7 @@
 
 ## 网络问题
 可以尝试以下方法解决网络问题：
-- 下载[`Watt Toolkit`](https://steampp.net/)加速GitHub
+- Windows建议用，下载[`Watt Toolkit`](https://steampp.net/)免费加速GitHub，但是Linux里基本用不了。
 - 科学上网，不方便细说
 
 ## 注册
@@ -12,8 +12,6 @@
 ## 设置ssh密钥
 ### 为什么要设置ssh密钥
 我们知道，要推送修改到GitHub仓库，首先肯定要验证你是谁，这样才能知道你有没有权限。
-
-![用ssh协议Clone仓库](images/clone-https.png)
 
 下面介绍三种GitHub支持的验证方式
 - 密码认证
@@ -31,6 +29,9 @@
 - 生成ssh密钥对
 - 将公钥上传到GitHub
 - 用ssh协议Clone仓库，或者[`设置远程推送URL`](set-git-remote-url.md)
+
+![用ssh协议Clone仓库](images/clone-ssh.png)
+
 ### 生成ssh密钥对
 在终端输入以下命令，生成ssh密钥对：
 ```sh
@@ -60,4 +61,10 @@ ssh-keygen
 ![添加新公钥](images/add-new-ssh-key.png)
 
 ## 加入组织
-todo
+ - 申请考核之前，是需要进入`mechanical-ancestor`组织的。
+
+ - 提供你的github账号，我们即可邀请你进入mechanical ancestor(MA视觉组织)
+
+ 你的github账号如下图所示：
+ ![github账号](images/github_account.png)
+
