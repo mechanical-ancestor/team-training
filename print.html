@@ -199,7 +199,7 @@ GitHub提供了一系列的工具和服务，帮助开发者更好地管理代�
 <h2 id="网络问题"><a class="header" href="#网络问题">网络问题</a></h2>
 <p>可以尝试以下方法解决网络问题：</p>
 <ul>
-<li>下载<a href="https://steampp.net/"><code>Watt Toolkit</code></a>加速GitHub</li>
+<li>Windows建议用，下载<a href="https://steampp.net/"><code>Watt Toolkit</code></a>免费加速GitHub，但是Linux里基本用不了。</li>
 <li>科学上网，不方便细说</li>
 </ul>
 <h2 id="注册"><a class="header" href="#注册">注册</a></h2>
@@ -208,7 +208,6 @@ GitHub提供了一系列的工具和服务，帮助开发者更好地管理代�
 <h2 id="设置ssh密钥"><a class="header" href="#设置ssh密钥">设置ssh密钥</a></h2>
 <h3 id="为什么要设置ssh密钥"><a class="header" href="#为什么要设置ssh密钥">为什么要设置ssh密钥</a></h3>
 <p>我们知道，要推送修改到GitHub仓库，首先肯定要验证你是谁，这样才能知道你有没有权限。</p>
-<p><img src="github/images/clone-https.png" alt="用ssh协议Clone仓库" /></p>
 <p>下面介绍三种GitHub支持的验证方式</p>
 <ul>
 <li>密码认证</li>
@@ -225,6 +224,7 @@ GitHub提供了一系列的工具和服务，帮助开发者更好地管理代�
 <li>将公钥上传到GitHub</li>
 <li>用ssh协议Clone仓库，或者<a href="github/set-git-remote-url.html"><code>设置远程推送URL</code></a></li>
 </ul>
+<p><img src="github/images/clone-ssh.png" alt="用ssh协议Clone仓库" /></p>
 <h3 id="生成ssh密钥对"><a class="header" href="#生成ssh密钥对">生成ssh密钥对</a></h3>
 <p>在终端输入以下命令，生成ssh密钥对：</p>
 <pre><code class="language-sh">ssh-keygen
@@ -248,59 +248,60 @@ GitHub提供了一系列的工具和服务，帮助开发者更好地管理代�
 </ul>
 <p><img src="github/images/add-new-ssh-key.png" alt="添加新公钥" /></p>
 <h2 id="加入组织"><a class="header" href="#加入组织">加入组织</a></h2>
-<p>todo</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="设置设置远程推送url为ssh-url"><a class="header" href="#设置设置远程推送url为ssh-url">设置设置远程推送URL为SSH URL</a></h1>
+<ul>
+<li>
+<p>申请考核之前，是需要进入<code>mechanical-ancestor</code>组织的。</p>
+</li>
+<li>
+<p>提供你的github账号，我们即可邀请你进入mechanical ancestor(MA视觉组织)</p>
+</li>
+</ul>
+<p>你的github账号如下图所示：
+<img src="github/images/github_account.png" alt="github账号" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="设置远程推送url为ssh-url"><a class="header" href="#设置远程推送url为ssh-url">设置远程推送URL为SSH URL</a></h1>
 <pre><code class="language-sh">git remote set-url --push origin &lt;ssh_url&gt;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="仓库-1"><a class="header" href="#仓库-1">仓库</a></h1>
 <h2 id="介绍"><a class="header" href="#介绍">介绍</a></h2>
+<p>仓库</p>
+<h2 id="组成"><a class="header" href="#组成">组成</a></h2>
+<ol>
+<li>Git仓库</li>
+<li>Issues</li>
+<li>Pull requests</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="问题跟踪-1"><a class="header" href="#问题跟踪-1">问题跟踪</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="流程"><a class="header" href="#流程">流程</a></h1>
 <p>完整的考核的流程为申请考核，本地完成考核和提交考核。</p>
 <h1 id="申请"><a class="header" href="#申请"><a href="task/request-for-task.html">申请</a></a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="申请考核"><a class="header" href="#申请考核">申请考核</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="为什么考核要申请"><a class="header" href="#为什么考核要申请">为什么考核要申请</a></h1>
+<p>这是为了方便追踪每个人的考核进度，提高考核效率，
+也帮助每个人提前熟悉分工明确的开发流程。</p>
+<h1 id="申请考核"><a class="header" href="#申请考核">申请考核</a></h1>
 <h2 id="查找考核issue"><a class="header" href="#查找考核issue">查找考核issue</a></h2>
 <p>要完成一个考核，你需要在<a href="https://github.com/mechanical-ancestor/team-training/issues">考核文档仓库的Issue</a>里找到对应的考核Issue,</p>
 <p><img src="task/images/find-issue.png" alt="find-issue" /></p>
-<h2 id="创建子问题"><a class="header" href="#创建子问题">创建子问题</a></h2>
+<p><em><strong>在这个issue中的介绍有一个链接，指向考核几的仓库</strong></em></p>
+<h2 id="创建问题"><a class="header" href="#创建问题">创建问题</a></h2>
 <ul>
 <li>
-<h3 id="考核仓库链接"><a class="header" href="#考核仓库链接">考核仓库链接</a></h3>
+<h3 id="尝试创建问题"><a class="header" href="#尝试创建问题">尝试创建问题</a></h3>
 </li>
 </ul>
-<p><em><strong>可以看到在issue中有一个链接，指向考核几的仓库，正如下图中的</strong></em> <code>考核一</code></p>
+<p>点击<code>New issue</code>按钮，再选择<code>申请考核</code></p>
+<p><img src="task/images/create-issue.png" alt="create-issue" /></p>
 <ul>
 <li>
-<h3 id="尝试创建子问题"><a class="header" href="#尝试创建子问题">尝试创建子问题</a></h3>
-</li>
-</ul>
-<p>点击<code>Create sub-issue</code>按钮，再选择<code>Create sub-issue</code></p>
-<p><img src="task/images/create-sub-issue.png" alt="create-sub-issue" /></p>
-<ul>
-<li>
-<h3 id="选择模板"><a class="header" href="#选择模板">选择模板</a></h3>
-</li>
-</ul>
-<p><img src="task/images/choose-issue-template.png" alt="choose-issue-template" /></p>
-<ul>
-<li>
-<h3 id="填写子问题标题和姓名"><a class="header" href="#填写子问题标题和姓名">填写子问题标题和姓名</a></h3>
+<h3 id="填写问题标题和姓名"><a class="header" href="#填写问题标题和姓名">填写问题标题和姓名</a></h3>
 </li>
 </ul>
 <p>根据模板提示填写即可</p>
 <p>最后点击<code>Create</code></p>
-<p><img src="task/images/creating-sub-issue.png" alt="creating-sub-issue" /></p>
-<h2 id="在子问题中创建分支"><a class="header" href="#在子问题中创建分支">在子问题中创建分支</a></h2>
-<p>找到并进入你刚刚创建的子问题，尝试在偏右下的地方找到并点击<code>Create a branch</code></p>
-<p><img src="task/images/create-branch-in-issue.png" alt="create-branch-in-issue" /></p>
-<p>注意一下几点：</p>
-<ul>
-<li>创建分支时，<code>Branch name</code>就是你要创建的分支的名称，写什么都行<sup class="footnote-reference" id="fr-name-1"><a href="#footnote-name">1</a></sup>，但要避免与其他人的分支名字冲突。</li>
-<li>Repository destination是目标仓库，也就是你的分支将被创建到的仓库，
-这里建议直接搜索<a href="task/request-for-task.html#%E8%80%83%E6%A0%B8%E4%BB%93%E5%BA%93%E9%93%BE%E6%8E%A5">考核仓库</a>的全名<sup class="footnote-reference" id="fr-search-1"><a href="#footnote-search">2</a></sup>。</li>
-<li>Branch source是你要复制的分支，一般是main分支。</li>
-</ul>
-<p><img src="task/images/creating-branch.png" alt="creating-branch" /></p>
+<p><img src="task/images/creating-issue.png" alt="creating-issue" /></p>
+<h2 id="加入ma的github组织"><a class="header" href="#加入ma的github组织"><a href="task/../github/getting-started.html#%E5%8A%A0%E5%85%A5%E7%BB%84%E7%BB%87">加入MA的Github组织</a></a></h2>
+<h2 id="等待管理员创建分支"><a class="header" href="#等待管理员创建分支">等待管理员创建分支</a></h2>
+<p>等待管理员为你创建开发分支，管理员创建后，一般会在你的Issue里留言，并留下创建的分支的链接，并且Github会通过邮件自动通知你，管理员的留言如下图：</p>
+<p><img src="task/images/issue-with-comment.png" alt="issue-with-comment" /></p>
 <h2 id="进入分支完成考核"><a class="header" href="#进入分支完成考核">进入分支，完成考核</a></h2>
 <p>进入这个branch，在这里完成你的考核</p>
 <p><img src="task/images/choose-created-branch.png" alt="choose-created-branch" /></p>
@@ -308,19 +309,7 @@ GitHub提供了一系列的工具和服务，帮助开发者更好地管理代�
 <p>完成后，先进入子问题，然后在<code>Add a comment</code>中写下你的考核完成情况，例如完成了什么</p>
 <p>然后点击<code>Close with comment</code>，即关闭问题。</p>
 <p><img src="task/images/close-issue.png" alt="close-issue" /></p>
-<h1 id="为什么考核要申请"><a class="header" href="#为什么考核要申请">为什么考核要申请</a></h1>
-<p>这是为了方便追踪每个人的考核进度，提高考核效率，
-也帮助每个人提前熟悉分工明确的开发流程。</p>
-<hr>
-<ol class="footnote-definition"><li id="footnote-name">
-<p>你上述创建的子问题已经包含了你的姓名，所以为了安全考虑，在创建其他东西例如分支和仓库等，你不需要再写自己的姓名。
-但为了避免与其他人的分支名字冲突，还是建议写上自己的姓名 <a href="#fr-name-1">↩</a></p>
-</li>
-<li id="footnote-search">
-<p>由于这里选择仓库不智能，搜索仓库名又会搜索到Github上所有的仓库，
-所以建议这里直接搜索仓库全名，即<code>仓库所有者名/仓库名</code>，例如<code>mechanical-ancestor/task_1</code> <a href="#fr-search-1">↩</a></p>
-</li>
-</ol><div style="break-before: page; page-break-before: always;"></div><h1 id="ubuntu-environment"><a class="header" href="#ubuntu-environment">Ubuntu Environment</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ubuntu-environment"><a class="header" href="#ubuntu-environment">Ubuntu Environment</a></h1>
 <h2 id="1-目录"><a class="header" href="#1-目录">1. 目录</a></h2>
 <ul>
 <li><a href="ubuntu_environment/index.html#1ubuntu%E4%B8%ADc%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91-90-%E6%98%AF%E5%90%84%E4%B8%AA%E5%BA%93%E7%89%88%E6%9C%AC%E4%B8%8D%E5%85%BC%E5%AE%B9">1.环境配置的一些经验</a></li>
