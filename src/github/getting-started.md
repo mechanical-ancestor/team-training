@@ -2,7 +2,7 @@
 
 ## 网络问题
 可以尝试以下方法解决网络问题：
-- 下载[`Watt Toolkit`](https://steampp.net/)加速GitHub
+- Windows建议用，下载[`Watt Toolkit`](https://steampp.net/)免费加速GitHub，但是Linux里基本用不了。
 - 科学上网，不方便细说
 
 ## 注册

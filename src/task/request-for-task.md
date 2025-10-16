@@ -26,6 +26,8 @@
 
 ![creating-issue](images/creating-issue.png)
 
+## [加入MA的Github组织](../github/getting-started.md#加入组织)
+
 ## 等待管理员创建分支
 
 等待管理员为你创建开发分支，管理员创建后，一般会在你的Issue里留言，并留下创建的分支的链接，并且Github会通过邮件自动通知你，管理员的留言如下图：
