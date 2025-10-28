@@ -41,7 +41,7 @@ sudo make install # 安装到系统目录
 ```bash
 sudo apt-get install '库在apt-get中的名字'
 ```
-<span style="color: rgba(102, 255, 0, 0.84); text-decoration: underline;">注：apt-get安装的库一般都比较老，版本比较低，如果想用最新版本，可以参考源码安装。  
+<span style="color: rgba(0, 170, 255, 0.84); text-decoration: underline;">注：apt-get安装的库一般都比较老，版本比较低，如果想用最新版本，可以参考源码安装。  
 名字不知道的话，可以问ai</span>  
 
 例子：
