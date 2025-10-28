@@ -5,10 +5,12 @@
 # 团队协作
 - [GitHub](github/README.md)
     - [开始使用](github/getting-started.md)
-        - [设置远程URL](github/set-git-remote-url.md)
     - [git使用](github/git-use.md)
     - [仓库](github/repository.md)
     - [问题跟踪](github/issues.md)
+- [Git](git/README.md)
+    - [分支](git/branch.md)
+    - [工作流](git/workflow.md)
 - [考核](task/README.md)
     - [申请](task/request-for-task.md)
 

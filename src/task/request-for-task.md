@@ -40,6 +40,9 @@
 
 ![choose-created-branch](images/choose-created-branch.png)
 
+## 上传代码
+如何使用Git上传代码，请参考[Git 工作流](../git/workflow.md)
+
 ## 关闭问题，完成考核
 
 完成后，先进入问题，然后在`Add a comment`中写下你的考核完成情况，例如完成了什么
