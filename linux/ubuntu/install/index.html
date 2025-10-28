@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>ubuntu环境构建 - MA-vision-documentation</title>
+        <title>ubuntu安装 - MA-vision-documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-2459343d.css">
-        <link rel="stylesheet" href="../css/chrome-cc69e1fb.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../../css/chrome-cc69e1fb.css">
+        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-56612340.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-56612340.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../";
+            const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-db64dc2c.js";
+            window.path_to_searchindex_js = "../../../searchindex-243881d9.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-e3ed3604.js"></script>
+        <script src="../../../toc-a5bbca40.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -105,7 +105,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -140,7 +140,7 @@
                     <h1 class="menu-title">MA-vision-documentation</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -174,56 +174,60 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="ubuntu-environment"><a class="header" href="#ubuntu-environment">Ubuntu Environment</a></h1>
-<h2 id="1-目录"><a class="header" href="#1-目录">1. 目录</a></h2>
-<ul>
-<li><a href="#1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容">1.环境配置的一些经验</a></li>
-<li><a href="#3自瞄环境配置">2.自瞄环境配置</a></li>
-</ul>
-<h2 id="2环境配置的一些经验"><a class="header" href="#2环境配置的一些经验">2.环境配置的一些经验</a></h2>
-<h3 id="1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容"><a class="header" href="#1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容">1.ubuntu中c++环境配置遇到的坑 90% 是各个库版本不兼容</a></h3>
-<h3 id="2如何安装c库"><a class="header" href="#2如何安装c库">2.如何安装c++库</a></h3>
-<p>如果你学过cmake，就应该知道c++项目都是(应该80%以上的吧)通过cmake编译和管理的。如果你不了解cmake，可以参考<a href="../coding/c++/c++.html">这里</a>。</p>
-<p>所以，如果你想安装c++库：</p>
-<h4 id="1源码安装"><a class="header" href="#1源码安装">1.源码安装：</a></h4>
-<p><span style="color: rgba(242, 0, 255, 0.79); text-decoration: underline;">思路和你编译运行c++程序一样，只是要先下载源码</span></p>
-<p>一般来说，c++库都有github仓库，你可以直接下载源码，然后编译安装。</p>
-<pre><code class="language-bash">git clone '库的github地址'
-</code></pre>
-<p>例子：</p>
-<pre><code class="language-bash">git clone https://github.com/opencv/opencv.git
-</code></pre>
-<p>进入源码目录，执行</p>
-<pre><code class="language-bash">mkdir build
-cd build
-cmake .. 
-make -j8 # 编译，-j8表示使用8个线程并行编译
-sudo make install # 安装到系统目录
-</code></pre>
-<h4 id="2包管理器安装"><a class="header" href="#2包管理器安装">2.包管理器安装：</a></h4>
-<p>如果你使用的是Ubuntu，你可以直接使用apt-get安装。</p>
-<pre><code class="language-bash">sudo apt-get install '库在apt-get中的名字'
-</code></pre>
-<p><span style="color: rgba(102, 255, 0, 0.84); text-decoration: underline;">注：apt-get安装的库一般都比较老，版本比较低，如果想用最新版本，可以参考源码安装。<br>名字不知道的话，可以问ai</span></p>
-<p>例子：</p>
-<pre><code class="language-bash">sudo apt-get install libopencv-dev
-</code></pre>
-<h3 id="3-如何跑开源项目"><a class="header" href="#3-如何跑开源项目">3. 如何跑开源项目</a></h3>
-<p>一般来说，开源项目都有详细的安装说明，你可以参考。
-在开源项目(github上)的readme中，一般都会有编译和运行的命令。</p>
-<p><span style="color: rgba(0, 162, 255, 0.7); text-decoration: underline;">思考： 在跑开源项目的时候，以及下面配置自瞄环境的时候 有各种不同的命令, 他们的作用是什么？，有其他方法吗？，相比于其他方法有什么优势(区别)</span></p>
-<h2 id="3自瞄环境配置"><a class="header" href="#3自瞄环境配置">3.自瞄环境配置</a></h2>
-<p>下面是老学长的环境配置（一点史，请见谅），可以参考：<br><a href="https://github.com/Aubrey-xiang/environment_configuration.git">老学长的环境配置</a></p>
+                        <h1 id="ubuntu-安装指南"><a class="header" href="#ubuntu-安装指南">ubuntu 安装指南</a></h1>
+<p>这里会介绍ubuntu的基本安装的步骤，</p>
+<p><strong>对于不同的电脑会有不同的细节（问题），也会有相应的解决方案汇总</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>下载方式</th><th>优势</th></tr>
+</thead>
+<tbody>
+<tr><td>双系统安装</td><td>性能优势：双系统是直接在硬件上运行 Ubuntu，能充分利用电脑的硬件资源，如 CPU、显卡、内存等</td></tr>
+<tr><td>虚拟机安装</td><td>便捷性强</td></tr>
+</tbody>
+</table>
+</div>
+<p>推荐双系统安装</p>
+<h2 id="双系统安装"><a class="header" href="#双系统安装">双系统安装</a></h2>
+<h3 id="1-下载-ubuntu-镜像"><a class="header" href="#1-下载-ubuntu-镜像">1. 下载 Ubuntu 镜像</a></h3>
+<p>首先：我们需要一个<span style="color: rgba(242, 0, 255, 0.79); text-decoration: underline;">U盘</span>（8GB足够）
+下载地址<br><a href="https://cn.ubuntu.com/download">官网</a></p>
+<p>推荐镜像下载
+<a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/">清华镜像</a>
+注：如何找镜像：
+游览器直接搜，如  <span style="color: rgba(0, 162, 255, 0.61); text-decoration: underline;">清华大学开源软件镜像站</span><br>进入镜像站后直接搜, 如<span style="color: rgba(0, 174, 255, 0.59); text-decoration: underline;">ubuntu-releases</span></p>
+<p>ubuntu镜像在官网也有链接</p>
+<h3 id="2-制作启动盘"><a class="header" href="#2-制作启动盘">2. 制作启动盘</a></h3>
+<p>需要一个<span style="color: rgba(0, 217, 255, 0.58); text-decoration: underline;">烧录软件</span>，推荐使用下面这个：</p>
+<p><a href="https://etcher.balena.io/">balenaEtcher官网</a></p>
+<p>其他烧录软件： 待补充</p>
+<h3 id="3-划分空闲磁盘分区"><a class="header" href="#3-划分空闲磁盘分区">3. 划分空闲磁盘分区</a></h3>
+<h4 id="a在-windows-系统中右键点击-此电脑选择-管理进入-磁盘管理"><a class="header" href="#a在-windows-系统中右键点击-此电脑选择-管理进入-磁盘管理">a.在 Windows 系统中，右键点击 “此电脑”，选择 “管理”，进入 “磁盘管理”；​</a></h4>
+<h4 id="b找到有空闲空间的磁盘如-d-盘右键点击该磁盘选择-压缩卷输入压缩空间大小建议-100gb-以上单位为-mb1gb1024mb如-100gb-需输入-102400"><a class="header" href="#b找到有空闲空间的磁盘如-d-盘右键点击该磁盘选择-压缩卷输入压缩空间大小建议-100gb-以上单位为-mb1gb1024mb如-100gb-需输入-102400">b.找到有空闲空间的磁盘（如 D 盘），右键点击该磁盘，选择 “压缩卷”，输入压缩空间大小（建议 100GB 以上，单位为 MB，1GB=1024MB，如 100GB 需输入 102400）；​</a></h4>
+<h4 id="c压缩完成后会出现一块-未分配-空间无需进一步操作关闭磁盘管理"><a class="header" href="#c压缩完成后会出现一块-未分配-空间无需进一步操作关闭磁盘管理">c.压缩完成后，会出现一块 “未分配” 空间，无需进一步操作，关闭磁盘管理。​</a></h4>
+<h3 id="4-设置电脑从-u-盘启动"><a class="header" href="#4-设置电脑从-u-盘启动">4. 设置电脑从 U 盘启动</a></h3>
+<h4 id="a-重启电脑在开机画面出现时快速按下启动快捷键不同品牌电脑快捷键不同常见的有-f2f10f12del开机画面通常会提示"><a class="header" href="#a-重启电脑在开机画面出现时快速按下启动快捷键不同品牌电脑快捷键不同常见的有-f2f10f12del开机画面通常会提示">a. 重启电脑，在开机画面出现时，快速按下启动快捷键（不同品牌电脑快捷键不同，常见的有 F2、F10、F12、Del，开机画面通常会提示）；</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>品牌</th><th>快捷键</th></tr>
+</thead>
+<tbody>
+<tr><td>拯救者</td><td>F2</td></tr>
+</tbody>
+</table>
+</div>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../coding/others/others.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../linux/ubuntu/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../sentry/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../linux/ubuntu/ubuntu_environment.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -233,11 +237,11 @@ sudo make install # 安装到系统目录
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../coding/others/others.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../linux/ubuntu/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../sentry/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../linux/ubuntu/ubuntu_environment.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -257,13 +261,13 @@ sudo make install # 安装到系统目录
         </script>
 
 
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-c2a407aa.js"></script>
+        <script src="../../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../../mark-09e88c2c.min.js"></script>
+        <script src="../../../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-a0b12cfe.js"></script>
+        <script src="../../../clipboard-1626706a.min.js"></script>
+        <script src="../../../highlight-abc7f01d.js"></script>
+        <script src="../../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

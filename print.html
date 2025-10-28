@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-db64dc2c.js";
+            window.path_to_searchindex_js = "searchindex-243881d9.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-e3ed3604.js"></script>
+        <script src="toc-a5bbca40.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -182,7 +182,8 @@
 
 <h2 id="本书的一些符号和标注"><a class="header" href="#本书的一些符号和标注">本书的一些符号和标注</a></h2>
 <ul>
-<li><code>&lt;XXX&gt;</code> 表示XXX是命令里你需要替换的内容.</li>
+<li><code>&lt;XXX&gt;</code> 表示命令里你需要根据实际情况替换的内容.
+例如你要<a href="#克隆">clone</a> <code>team-training</code>仓库，<code>git clone &lt;url&gt;</code>，你需要替换成<code>git clone git@github.com:mechanical-ancestor/team-training.git</code>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="github"><a class="header" href="#github">GitHub</a></h1>
@@ -322,7 +323,7 @@ GitHub提供了一系列的工具和服务，帮助开发者更好地管理代�
 <h2 id="local仓库"><a class="header" href="#local仓库">local仓库</a></h2>
 <p>local仓库是指你本地的仓库</p>
 <p>local仓库基本是remote仓库的一个镜像版本,</p>
-<p>例如你如果有远程仓库<code>remote/main</code>,
+<p>例如你如果有远程分支<code>remote/main</code>,
 那么你本地仓库的<code>main</code>分支就是<code>remote/main</code>的一个镜像版本.</p>
 <p>之后你所有关于<code>main</code>分支的修改本地的修改和提交都发生在本地仓库的<code>main</code>分支上</p>
 <p>所以你<a href="#推送">push</a>命令实际上是把本地的分支同步到远程仓库的对应分支上.</p>
@@ -479,28 +480,51 @@ git config --global user.email "&lt;email&gt;"
 <h3 id="cc--rustpython"><a class="header" href="#cc--rustpython">c++(c) –&gt; rust/python</a></h3>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="c"><a class="header" href="#c">c++</a></h1>
-<h2 id="1代码规范"><a class="header" href="#1代码规范">1.代码规范</a></h2>
+<h2 id="代码规范"><a class="header" href="#代码规范">代码规范</a></h2>
 <h3 id="为什么要代码规范"><a class="header" href="#为什么要代码规范">为什么要代码规范</a></h3>
-<p>1.提高可读性，降低理解成本</p>
-<p>2.便于维护和迭代</p>
-<p>3.减少团队协作冲突</p>
-<p>4.降低错误风险</p>
+<ul>
+<li>
+<p>提高可读性，降低理解成本</p>
+</li>
+<li>
+<p>便于维护和迭代</p>
+</li>
+<li>
+<p>减少团队协作冲突</p>
+</li>
+<li>
+<p>降低错误风险</p>
+</li>
+</ul>
 <h3 id="怎么规范代码"><a class="header" href="#怎么规范代码">怎么规范代码</a></h3>
 <p>交爷给了我们一份《C++编码规范》，可以作为参考：<br><a href="https://sjtu-robomaster-team.github.io/cpp-style-guide/">上海交龙的C++编码规范</a></p>
 <p>上海交龙的超多教程：
 <a href="https://sjtu-robomaster-team.github.io/">上海交龙的视觉教程</a></p>
-<h2 id="2核心知识"><a class="header" href="#2核心知识">2.核心知识</a></h2>
+<h2 id="核心知识"><a class="header" href="#核心知识">核心知识</a></h2>
 <p>暂时会前两个就行了</p>
-<h3 id="1基本语法与c语言相同"><a class="header" href="#1基本语法与c语言相同">1.基本语法（与C语言相同）</a></h3>
-<h3 id="2类与对象"><a class="header" href="#2类与对象">2.类与对象</a></h3>
-<h3 id="3多线程与并发编程"><a class="header" href="#3多线程与并发编程">3.多线程与并发编程</a></h3>
-<h3 id="4学习资源"><a class="header" href="#4学习资源">4.学习资源</a></h3>
+<ul>
+<li>
+<h3 id="基本语法"><a class="header" href="#基本语法">基本语法</a></h3>
+</li>
+</ul>
+<p>与C语言相同</p>
+<ul>
+<li>
+<h3 id="类与对象"><a class="header" href="#类与对象">类与对象</a></h3>
+</li>
+<li>
+<h3 id="多线程与并发编程"><a class="header" href="#多线程与并发编程">多线程与并发编程</a></h3>
+</li>
+<li>
+<h3 id="学习资源"><a class="header" href="#学习资源">学习资源</a></h3>
+</li>
+</ul>
 <p><a href="https://isocpp.org/">c++官网</a></p>
 <p>入门：b站上有很多教程(大差不差)</p>
 <p>可以看这个（详细）（捡自己感兴趣的看）
 <a href="https://cppreference.cn/w/">c++参考手册</a></p>
 <p>有兴趣的可以了解c++的新特性</p>
-<h2 id="3cmake管理c项目"><a class="header" href="#3cmake管理c项目">3.cmake管理c++项目</a></h2>
+<h2 id="cmake管理c项目"><a class="header" href="#cmake管理c项目">cmake管理c++项目</a></h2>
 <p><a href="https://cmake.org/cmake/help/latest/guide/tutorial/index.html">CMake 官方文档</a></p>
 <p><a href="https://www.runoob.com/cmake/cmake-tutorial.html">CMake 入门</a></p>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -518,6 +542,56 @@ git config --global user.email "&lt;email&gt;"
 <p>十分钟学会 Markdown:
 <a href="https://www.jianshu.com/p/q81RER">学习 markdown</a></p>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="linux"><a class="header" href="#linux">linux</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ubuntu"><a class="header" href="#ubuntu">ubuntu</a></h1>
+<h2 id="1-安装ubuntu"><a class="header" href="#1-安装ubuntu">1. 安装ubuntu</a></h2>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ubuntu-安装指南"><a class="header" href="#ubuntu-安装指南">ubuntu 安装指南</a></h1>
+<p>这里会介绍ubuntu的基本安装的步骤，</p>
+<p><strong>对于不同的电脑会有不同的细节（问题），也会有相应的解决方案汇总</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>下载方式</th><th>优势</th></tr>
+</thead>
+<tbody>
+<tr><td>双系统安装</td><td>性能优势：双系统是直接在硬件上运行 Ubuntu，能充分利用电脑的硬件资源，如 CPU、显卡、内存等</td></tr>
+<tr><td>虚拟机安装</td><td>便捷性强</td></tr>
+</tbody>
+</table>
+</div>
+<p>推荐双系统安装</p>
+<h2 id="双系统安装"><a class="header" href="#双系统安装">双系统安装</a></h2>
+<h3 id="1-下载-ubuntu-镜像"><a class="header" href="#1-下载-ubuntu-镜像">1. 下载 Ubuntu 镜像</a></h3>
+<p>首先：我们需要一个<span style="color: rgba(242, 0, 255, 0.79); text-decoration: underline;">U盘</span>（8GB足够）
+下载地址<br><a href="https://cn.ubuntu.com/download">官网</a></p>
+<p>推荐镜像下载
+<a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/">清华镜像</a>
+注：如何找镜像：
+游览器直接搜，如  <span style="color: rgba(0, 162, 255, 0.61); text-decoration: underline;">清华大学开源软件镜像站</span><br>进入镜像站后直接搜, 如<span style="color: rgba(0, 174, 255, 0.59); text-decoration: underline;">ubuntu-releases</span></p>
+<p>ubuntu镜像在官网也有链接</p>
+<h3 id="2-制作启动盘"><a class="header" href="#2-制作启动盘">2. 制作启动盘</a></h3>
+<p>需要一个<span style="color: rgba(0, 217, 255, 0.58); text-decoration: underline;">烧录软件</span>，推荐使用下面这个：</p>
+<p><a href="https://etcher.balena.io/">balenaEtcher官网</a></p>
+<p>其他烧录软件： 待补充</p>
+<h3 id="3-划分空闲磁盘分区"><a class="header" href="#3-划分空闲磁盘分区">3. 划分空闲磁盘分区</a></h3>
+<h4 id="a在-windows-系统中右键点击-此电脑选择-管理进入-磁盘管理"><a class="header" href="#a在-windows-系统中右键点击-此电脑选择-管理进入-磁盘管理">a.在 Windows 系统中，右键点击 “此电脑”，选择 “管理”，进入 “磁盘管理”；​</a></h4>
+<h4 id="b找到有空闲空间的磁盘如-d-盘右键点击该磁盘选择-压缩卷输入压缩空间大小建议-100gb-以上单位为-mb1gb1024mb如-100gb-需输入-102400"><a class="header" href="#b找到有空闲空间的磁盘如-d-盘右键点击该磁盘选择-压缩卷输入压缩空间大小建议-100gb-以上单位为-mb1gb1024mb如-100gb-需输入-102400">b.找到有空闲空间的磁盘（如 D 盘），右键点击该磁盘，选择 “压缩卷”，输入压缩空间大小（建议 100GB 以上，单位为 MB，1GB=1024MB，如 100GB 需输入 102400）；​</a></h4>
+<h4 id="c压缩完成后会出现一块-未分配-空间无需进一步操作关闭磁盘管理"><a class="header" href="#c压缩完成后会出现一块-未分配-空间无需进一步操作关闭磁盘管理">c.压缩完成后，会出现一块 “未分配” 空间，无需进一步操作，关闭磁盘管理。​</a></h4>
+<h3 id="4-设置电脑从-u-盘启动"><a class="header" href="#4-设置电脑从-u-盘启动">4. 设置电脑从 U 盘启动</a></h3>
+<h4 id="a-重启电脑在开机画面出现时快速按下启动快捷键不同品牌电脑快捷键不同常见的有-f2f10f12del开机画面通常会提示"><a class="header" href="#a-重启电脑在开机画面出现时快速按下启动快捷键不同品牌电脑快捷键不同常见的有-f2f10f12del开机画面通常会提示">a. 重启电脑，在开机画面出现时，快速按下启动快捷键（不同品牌电脑快捷键不同，常见的有 F2、F10、F12、Del，开机画面通常会提示）；</a></h4>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>品牌</th><th>快捷键</th></tr>
+</thead>
+<tbody>
+<tr><td>拯救者</td><td>F2</td></tr>
+</tbody>
+</table>
+</div>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="ubuntu-environment"><a class="header" href="#ubuntu-environment">Ubuntu Environment</a></h1>
 <h2 id="1-目录"><a class="header" href="#1-目录">1. 目录</a></h2>
 <ul>
@@ -527,7 +601,7 @@ git config --global user.email "&lt;email&gt;"
 <h2 id="2环境配置的一些经验"><a class="header" href="#2环境配置的一些经验">2.环境配置的一些经验</a></h2>
 <h3 id="1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容"><a class="header" href="#1ubuntu中c环境配置遇到的坑-90-是各个库版本不兼容">1.ubuntu中c++环境配置遇到的坑 90% 是各个库版本不兼容</a></h3>
 <h3 id="2如何安装c库"><a class="header" href="#2如何安装c库">2.如何安装c++库</a></h3>
-<p>如果你学过cmake，就应该知道c++项目都是(应该80%以上的吧)通过cmake编译和管理的。如果你不了解cmake，可以参考<a href="#c">这里</a>。</p>
+<p>如果你学过cmake，就应该知道c++项目都是(应该80%以上的吧)通过cmake编译和管理的。如果你不了解cmake，可以参考<a href="../coding/c++/c++.html">这里</a>。</p>
 <p>所以，如果你想安装c++库：</p>
 <h4 id="1源码安装"><a class="header" href="#1源码安装">1.源码安装：</a></h4>
 <p><span style="color: rgba(242, 0, 255, 0.79); text-decoration: underline;">思路和你编译运行c++程序一样，只是要先下载源码</span></p>
@@ -548,7 +622,7 @@ sudo make install # 安装到系统目录
 <p>如果你使用的是Ubuntu，你可以直接使用apt-get安装。</p>
 <pre><code class="language-bash">sudo apt-get install '库在apt-get中的名字'
 </code></pre>
-<p><span style="color: rgba(102, 255, 0, 0.84); text-decoration: underline;">注：apt-get安装的库一般都比较老，版本比较低，如果想用最新版本，可以参考源码安装。<br>名字不知道的话，可以问ai</span></p>
+<p><span style="color: rgba(0, 170, 255, 0.84); text-decoration: underline;">注：apt-get安装的库一般都比较老，版本比较低，如果想用最新版本，可以参考源码安装。<br>名字不知道的话，可以问ai</span></p>
 <p>例子：</p>
 <pre><code class="language-bash">sudo apt-get install libopencv-dev
 </code></pre>
