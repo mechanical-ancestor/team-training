@@ -20,7 +20,7 @@
 
 由于GitHub在2021年8月13日以后[不再支持密码登录](https://github.blog/changelog/2021-08-12-git-password-authentication-is-shutting-down/)，而是推荐双因素认证。
 
-由于https协议在推送提交时用的就是密码认证，导致用https协议Clone下来的仓库，在推送修改时如果没有[`设置远程推送URL`](set-git-remote-url.md)，
+由于https协议在推送提交时用的就是密码认证，导致用https协议Clone下来的仓库，在推送修改时如果没有[`设置远程推送URL`](../git/branch.md#设置远程推送URL)，
 由于无法通过密码认证，导致无法推送。
 
 但是如果使用ssh协议进行clone下来的仓库，就不需要输入用户名和密码，因为ssh协议使用你提前上传的ssh公钥进行认证。
@@ -28,7 +28,7 @@
 为此我们可知，要使用ssh密钥认证，你需要：
 - 生成ssh密钥对
 - 将公钥上传到GitHub
-- 用ssh协议Clone仓库，或者[`设置远程推送URL`](set-git-remote-url.md)
+- 用ssh协议Clone仓库，或者[`设置远程推送URL`](../git/branch.md#设置远程推送URL)
 
 ![用ssh协议Clone仓库](images/clone-ssh.png)
 
