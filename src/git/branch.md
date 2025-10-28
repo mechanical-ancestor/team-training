@@ -35,7 +35,7 @@ local仓库是指你本地的仓库
 
 local仓库基本是remote仓库的一个镜像版本,
 
-例如你如果有远程仓库`remote/main`,
+例如你如果有远程分支`remote/main`,
 那么你本地仓库的`main`分支就是`remote/main`的一个镜像版本.
 
 之后你所有关于`main`分支的修改本地的修改和提交都发生在本地仓库的`main`分支上
