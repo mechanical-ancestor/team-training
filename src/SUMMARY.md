@@ -21,8 +21,12 @@
     - [python](coding/python/python.md)  
     - [不只有这些](coding/others/others.md)
 
-# 环境构建
-- [ubuntu环境构建](ubuntu_environment/README.md)
+# linux
+- [linux](linux/README.md)
+    - [ubuntu](linux/ubuntu/README.md)
+        - [ubuntu安装](linux/ubuntu/install/README.md)
+        - [ubuntu环境配置](linux/ubuntu/ubuntu_environment.md)
+
 
 
 # 导航
