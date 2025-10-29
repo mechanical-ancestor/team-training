@@ -65,36 +65,36 @@ ubuntu镜像在官网也有链接
 #### a.在U盘界面选择try or install ubuntu
 
 #### b.
-![1](src/linux/ubuntu/images/1.png)
+![1](../images/1.png)
 
-![2](src/linux/ubuntu/images/2.png)
+![2](../images/2.png)
 
-![3](src/linux/ubuntu/images/3.png)
+![3](../images/3.png)
 
 #### ***后续部分默认继续即可***
-![4](src/linux/ubuntu/images/4.png)
+![4](../images/4.png)
 
-![5](src/linux/ubuntu/images/5.png)
+![5](../images/5.png)
 #### ***选择你上面分出来的空区域，一般是空闲，看旁边的大小来判断,点击“+”号进行分区***
 
 #### c.★EFI系统分区
 
-    EFI分区通常位于磁盘的前部，因此我们需要第一创建。并且刚刚我们通过BIOS中的Boot得知，使用的是UEFI引导模式，因此创建EFI分区是必须的！大小通常设置为100MB到500MB即可
+EFI分区通常位于磁盘的前部，因此我们需要第一创建。并且刚刚我们通过BIOS中的Boot得知，使用的是UEFI引导模式，因此创建EFI分区是必须的！大小通常设置为100MB到500MB即可
 
-#### d.★ 根分区 /
-    根分区是整个文件系统的根目录，所有的系统文件和用户数据都在这个文件系统下，因此主要的空间应该留给根分区。(主分区）
+#### d.★ 根分区 
+根分区是整个文件系统的根目录，所有的系统文件和用户数据都在这个文件系统下，因此主要的空间应该留给根分区.（主分区）
 
-![6](src/linux/ubuntu/images/6.png)
+![6](../images/6.png)
 
-![7](src/linux/ubuntu/images/7.png)
+![7](../images/7.png)
 
-![8](src/linux/ubuntu/images/8.png)
+![8](../images/8.png)
 
-![9](src/linux/ubuntu/images/9.png)
+![9](../images/9.png)
 
-![10](src/linux/ubuntu/images/10.png)
+![10](../images/10.png)
 
-![11](src/linux/ubuntu/images/11.png)
+![11](../images/11.png)
 
 #### e.进入ubuntu系统:
 
