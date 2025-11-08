@@ -15,11 +15,11 @@
     - [申请](task/request-for-task.md)
 
 # 编程的开始
-  - [Sum](coding/README.md)  
+  - [Coding](coding/README.md)  
     - [c++](coding/c++/c++.md)  
     - [rust](coding/rust/rust.md)   
     - [python](coding/python/python.md)  
-    - [不只有这些](coding/others/others.md)
+    - [markdown](coding/markdown/markdown.md)
 
 # linux
 - [linux](linux/README.md)
