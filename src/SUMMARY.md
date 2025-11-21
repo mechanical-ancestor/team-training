@@ -26,6 +26,7 @@
     - [ubuntu](linux/ubuntu/README.md)
         - [ubuntu安装](linux/ubuntu/install/README.md)
         - [ubuntu环境配置](linux/ubuntu/ubuntu_environment.md)
+        - [brltty](linux/ubuntu/serial/brltty.md)
 
 # 导航
 - [导航](sentry/README.md)
