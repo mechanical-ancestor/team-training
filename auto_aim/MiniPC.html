@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>申请 - MA-vision-documentation</title>
+        <title>MiniPC - MA-vision-documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -174,53 +174,31 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="为什么考核要申请"><a class="header" href="#为什么考核要申请">为什么考核要申请</a></h1>
-<p>这是为了方便追踪每个人的考核进度，提高考核效率，
-也帮助每个人提前熟悉分工明确的开发流程。</p>
-<h1 id="申请考核"><a class="header" href="#申请考核">申请考核</a></h1>
-<h2 id="查找考核issue"><a class="header" href="#查找考核issue">查找考核issue</a></h2>
-<p>要完成一个考核，你需要在<a href="https://github.com/mechanical-ancestor/team-training/issues">考核文档仓库的Issue</a>里找到对应的考核Issue,</p>
-<p><img src="images/find-issue.png" alt="find-issue"></p>
-<p><em><strong>在这个issue中的介绍有一个链接，指向考核几的仓库</strong></em></p>
-<h2 id="创建问题"><a class="header" href="#创建问题">创建问题</a></h2>
-<ul>
-<li>
-<h3 id="尝试创建问题"><a class="header" href="#尝试创建问题">尝试创建问题</a></h3>
-</li>
-</ul>
-<p>点击<code>New issue</code>按钮，再选择<code>申请考核</code></p>
-<p><img src="images/create-issue.png" alt="create-issue"></p>
-<ul>
-<li>
-<h3 id="填写问题标题和姓名"><a class="header" href="#填写问题标题和姓名">填写问题标题和姓名</a></h3>
-</li>
-</ul>
-<p>根据模板提示填写即可</p>
-<p>最后点击<code>Create</code></p>
-<p><img src="images/creating-issue.png" alt="creating-issue"></p>
-<h2 id="加入ma的github组织"><a class="header" href="#加入ma的github组织"><a href="../github/getting-started.html#加入组织">加入MA的Github组织</a></a></h2>
-<h2 id="等待管理员创建分支"><a class="header" href="#等待管理员创建分支">等待管理员创建分支</a></h2>
-<p>等待管理员为你创建开发分支，管理员创建后，一般会在你的Issue里留言，并留下创建的分支的链接，并且Github会通过邮件自动通知你，管理员的留言如下图：</p>
-<p><img src="images/issue-with-comment.png" alt="issue-with-comment"></p>
-<h2 id="进入分支完成考核"><a class="header" href="#进入分支完成考核">进入分支，完成考核</a></h2>
-<p>进入这个branch，在这里完成你的考核</p>
-<p><img src="images/choose-created-branch.png" alt="choose-created-branch"></p>
-<h2 id="上传代码"><a class="header" href="#上传代码">上传代码</a></h2>
-<p>如何使用Git上传代码，请参考<a href="../git/workflow.html">Git 工作流</a></p>
-<h2 id="关闭问题完成考核"><a class="header" href="#关闭问题完成考核">关闭问题，完成考核</a></h2>
-<p>完成后，先进入问题，然后在<code>Add a comment</code>中写下你的考核完成情况，例如完成了什么</p>
-<p>然后点击<code>Close with comment</code>，即关闭问题。</p>
-<p><img src="images/close-issue.png" alt="close-issue"></p>
+                        <h1 id="小电脑相关问题"><a class="header" href="#小电脑相关问题">小电脑相关问题</a></h1>
+<h2 id="1110-雷神卡顿问题"><a class="header" href="#1110-雷神卡顿问题">11.10 雷神卡顿问题</a></h2>
+<p><em><strong>雷神新装的电脑遇到跑代码明显掉帧问题，降低电脑分辨率帧率明显提神，初步判断是网口线输出远程屏幕的数据严重占用电脑性能</strong></em></p>
+<h2 id="1112-远程桌面连接时会断连"><a class="header" href="#1112-远程桌面连接时会断连">11.12 远程桌面连接时会断连</a></h2>
+<h3 id="问题描述"><a class="header" href="#问题描述">问题描述</a></h3>
+<h4 id="1首先rdp服务器断连接但ssh服务器没问题重启小电脑可以连接"><a class="header" href="#1首先rdp服务器断连接但ssh服务器没问题重启小电脑可以连接">1.首先RDP服务器断连接，但SSH服务器没问题，重启小电脑可以连接</a></h4>
+<h4 id="2rdp和ssh均无法连接重启小电脑也不行本机电脑重启可解决"><a class="header" href="#2rdp和ssh均无法连接重启小电脑也不行本机电脑重启可解决">2.RDP和SSH均无法连接，重启小电脑也不行，本机电脑重启可解决</a></h4>
+<h3 id="问题原因"><a class="header" href="#问题原因">问题原因</a></h3>
+<h4 id="1初步判断是由于云台抖动导致网线松了插拔之后可连接ssh但rdp服务器无法连接"><a class="header" href="#1初步判断是由于云台抖动导致网线松了插拔之后可连接ssh但rdp服务器无法连接">1.初步判断是由于云台抖动导致网线松了，插拔之后可连接SSH，但RDP服务器无法连接</a></h4>
+<h3 id="解决方案"><a class="header" href="#解决方案">解决方案</a></h3>
+<pre><code class="language-bash">sudo apt update
+sudo apt install xrdp -y
+sudo systemctl enable xrdp
+</code></pre>
+<p><em><strong>暂无</strong></em></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../task/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../auto_aim/IO.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../coding/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../auto_aim/vision.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -230,11 +208,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../task/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../auto_aim/IO.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../coding/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../auto_aim/vision.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

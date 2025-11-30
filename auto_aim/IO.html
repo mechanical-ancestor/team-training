@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>申请 - MA-vision-documentation</title>
+        <title>硬件IO - MA-vision-documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -174,53 +174,34 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="为什么考核要申请"><a class="header" href="#为什么考核要申请">为什么考核要申请</a></h1>
-<p>这是为了方便追踪每个人的考核进度，提高考核效率，
-也帮助每个人提前熟悉分工明确的开发流程。</p>
-<h1 id="申请考核"><a class="header" href="#申请考核">申请考核</a></h1>
-<h2 id="查找考核issue"><a class="header" href="#查找考核issue">查找考核issue</a></h2>
-<p>要完成一个考核，你需要在<a href="https://github.com/mechanical-ancestor/team-training/issues">考核文档仓库的Issue</a>里找到对应的考核Issue,</p>
-<p><img src="images/find-issue.png" alt="find-issue"></p>
-<p><em><strong>在这个issue中的介绍有一个链接，指向考核几的仓库</strong></em></p>
-<h2 id="创建问题"><a class="header" href="#创建问题">创建问题</a></h2>
-<ul>
-<li>
-<h3 id="尝试创建问题"><a class="header" href="#尝试创建问题">尝试创建问题</a></h3>
-</li>
-</ul>
-<p>点击<code>New issue</code>按钮，再选择<code>申请考核</code></p>
-<p><img src="images/create-issue.png" alt="create-issue"></p>
-<ul>
-<li>
-<h3 id="填写问题标题和姓名"><a class="header" href="#填写问题标题和姓名">填写问题标题和姓名</a></h3>
-</li>
-</ul>
-<p>根据模板提示填写即可</p>
-<p>最后点击<code>Create</code></p>
-<p><img src="images/creating-issue.png" alt="creating-issue"></p>
-<h2 id="加入ma的github组织"><a class="header" href="#加入ma的github组织"><a href="../github/getting-started.html#加入组织">加入MA的Github组织</a></a></h2>
-<h2 id="等待管理员创建分支"><a class="header" href="#等待管理员创建分支">等待管理员创建分支</a></h2>
-<p>等待管理员为你创建开发分支，管理员创建后，一般会在你的Issue里留言，并留下创建的分支的链接，并且Github会通过邮件自动通知你，管理员的留言如下图：</p>
-<p><img src="images/issue-with-comment.png" alt="issue-with-comment"></p>
-<h2 id="进入分支完成考核"><a class="header" href="#进入分支完成考核">进入分支，完成考核</a></h2>
-<p>进入这个branch，在这里完成你的考核</p>
-<p><img src="images/choose-created-branch.png" alt="choose-created-branch"></p>
-<h2 id="上传代码"><a class="header" href="#上传代码">上传代码</a></h2>
-<p>如何使用Git上传代码，请参考<a href="../git/workflow.html">Git 工作流</a></p>
-<h2 id="关闭问题完成考核"><a class="header" href="#关闭问题完成考核">关闭问题，完成考核</a></h2>
-<p>完成后，先进入问题，然后在<code>Add a comment</code>中写下你的考核完成情况，例如完成了什么</p>
-<p>然后点击<code>Close with comment</code>，即关闭问题。</p>
-<p><img src="images/close-issue.png" alt="close-issue"></p>
+                        <h1 id="硬件io通信相关问题"><a class="header" href="#硬件io通信相关问题">硬件IO通信相关问题</a></h1>
+<h2 id="1110-串口无权限问题"><a class="header" href="#1110-串口无权限问题">11.10 串口无权限问题</a></h2>
+<pre><code class="language-text">[2025-11-10 20:33:16.928] [error] [Gimbal] Failed to open serial: IO Exception (13): Permission denied, file /home/ma/code/MA_2026/io/serial/src/impl/unix.cc, line 151.
+</code></pre>
+<p><em><strong>解决方案</strong></em></p>
+<h3 id="1列出所有设备"><a class="header" href="#1列出所有设备">1.列出所有设备</a></h3>
+<pre><code class="language-bash">ls -l /dev/ttyUSB* /dev/ttyACM*
+</code></pre>
+<h3 id="2给予权限"><a class="header" href="#2给予权限">2.给予权限</a></h3>
+<pre><code class="language-bash">sudo usermod -aG dialout ma
+</code></pre>
+<h2 id="1112-电控遇到无故限位以及抖动问题"><a class="header" href="#1112-电控遇到无故限位以及抖动问题">11.12 电控遇到无故限位以及抖动问题</a></h2>
+<p><em><strong>视觉发送的数据无异常</strong></em></p>
+<h3 id="1分电板信号传输有问题底盘电机控制can信号若有若无"><a class="header" href="#1分电板信号传输有问题底盘电机控制can信号若有若无">1.分电板信号传输有问题，底盘电机控制can信号若有若无</a></h3>
+<h3 id="2限位问题来源于-180度到180度的切换导致甩头不跟随"><a class="header" href="#2限位问题来源于-180度到180度的切换导致甩头不跟随">2.限位问题来源于-180度到180度的切换导致甩头不跟随</a></h3>
+<h3 id="31115补充电控云台抖动多路can集中在一路fifo容量过多优先级没有设定"><a class="header" href="#31115补充电控云台抖动多路can集中在一路fifo容量过多优先级没有设定">3.11.15补充，电控云台抖动，多路can集中在一路，FiFo容量过多，优先级没有设定</a></h3>
+<h2 id="1130-串口通信问题"><a class="header" href="#1130-串口通信问题">11.30 串口通信问题</a></h2>
+<h3 id="1在雷神上读取串口数据稳定正常无crc报错在我y7000p电脑上一半数据能正确读取一半报crc错误"><a class="header" href="#1在雷神上读取串口数据稳定正常无crc报错在我y7000p电脑上一半数据能正确读取一半报crc错误">1.在雷神上读取串口数据稳定正常无crc报错，在我y7000p电脑上一半数据能正确读取，一半报crc错误</a></h3>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../task/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../auto_aim/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../coding/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../auto_aim/MiniPC.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -230,11 +211,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../task/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../auto_aim/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../coding/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../auto_aim/MiniPC.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

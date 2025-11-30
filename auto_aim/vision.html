@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>申请 - MA-vision-documentation</title>
+        <title>视觉算法 - MA-vision-documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -174,55 +174,87 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="为什么考核要申请"><a class="header" href="#为什么考核要申请">为什么考核要申请</a></h1>
-<p>这是为了方便追踪每个人的考核进度，提高考核效率，
-也帮助每个人提前熟悉分工明确的开发流程。</p>
-<h1 id="申请考核"><a class="header" href="#申请考核">申请考核</a></h1>
-<h2 id="查找考核issue"><a class="header" href="#查找考核issue">查找考核issue</a></h2>
-<p>要完成一个考核，你需要在<a href="https://github.com/mechanical-ancestor/team-training/issues">考核文档仓库的Issue</a>里找到对应的考核Issue,</p>
-<p><img src="images/find-issue.png" alt="find-issue"></p>
-<p><em><strong>在这个issue中的介绍有一个链接，指向考核几的仓库</strong></em></p>
-<h2 id="创建问题"><a class="header" href="#创建问题">创建问题</a></h2>
-<ul>
-<li>
-<h3 id="尝试创建问题"><a class="header" href="#尝试创建问题">尝试创建问题</a></h3>
-</li>
-</ul>
-<p>点击<code>New issue</code>按钮，再选择<code>申请考核</code></p>
-<p><img src="images/create-issue.png" alt="create-issue"></p>
-<ul>
-<li>
-<h3 id="填写问题标题和姓名"><a class="header" href="#填写问题标题和姓名">填写问题标题和姓名</a></h3>
-</li>
-</ul>
-<p>根据模板提示填写即可</p>
-<p>最后点击<code>Create</code></p>
-<p><img src="images/creating-issue.png" alt="creating-issue"></p>
-<h2 id="加入ma的github组织"><a class="header" href="#加入ma的github组织"><a href="../github/getting-started.html#加入组织">加入MA的Github组织</a></a></h2>
-<h2 id="等待管理员创建分支"><a class="header" href="#等待管理员创建分支">等待管理员创建分支</a></h2>
-<p>等待管理员为你创建开发分支，管理员创建后，一般会在你的Issue里留言，并留下创建的分支的链接，并且Github会通过邮件自动通知你，管理员的留言如下图：</p>
-<p><img src="images/issue-with-comment.png" alt="issue-with-comment"></p>
-<h2 id="进入分支完成考核"><a class="header" href="#进入分支完成考核">进入分支，完成考核</a></h2>
-<p>进入这个branch，在这里完成你的考核</p>
-<p><img src="images/choose-created-branch.png" alt="choose-created-branch"></p>
-<h2 id="上传代码"><a class="header" href="#上传代码">上传代码</a></h2>
-<p>如何使用Git上传代码，请参考<a href="../git/workflow.html">Git 工作流</a></p>
-<h2 id="关闭问题完成考核"><a class="header" href="#关闭问题完成考核">关闭问题，完成考核</a></h2>
-<p>完成后，先进入问题，然后在<code>Add a comment</code>中写下你的考核完成情况，例如完成了什么</p>
-<p>然后点击<code>Close with comment</code>，即关闭问题。</p>
-<p><img src="images/close-issue.png" alt="close-issue"></p>
+                        <h1 id="此文档为自瞄算法相关文档开源来源于同济25自瞄开源"><a class="header" href="#此文档为自瞄算法相关文档开源来源于同济25自瞄开源">此文档为自瞄算法相关文档（开源来源于同济25自瞄开源）</a></h1>
+<h2 id="代码结构"><a class="header" href="#代码结构">代码结构</a></h2>
+<pre><code class="language-text">sp_vision_25
+├── assets         // 包含demo素材、网络权重等
+│   └── ...
+├── calibration    // 标定相关程序
+│   ├── calibrate_camera.cpp             // 相机内参标定程序
+│   ├── calibrate_handeye.cpp            // 手眼标定程序
+│   ├── calibrate_robotworld_handeye.cpp // 手眼标定程序（同时计算标定板位置）
+│   └── capture.cpp                      // 相机标定数据采集程序
+├── CMakeLists.txt // CMake配置文件
+├── configs        // 每台机器人的YAML配置文件
+│   └── ...
+├── io             // 硬件抽象层，见3.4软件架构
+│   └── ...
+├── src            // 应用层，见3.4软件架构
+│   └── ...
+├── tasks          // 功能层，见3.4软件架构
+│   ├── auto_aim       // 自瞄相关算法实现
+│   │   └── ...
+│   ├── auto_buff      // 打符相关算法实现
+│   │   └── ...
+│   └── omniperception // 全向感知相关算法实现
+│   │   └── ...
+├── tests
+│   ├── auto_aim_test.cpp         // 自瞄录制视频测试程序
+│   ├── auto_buff_test.cpp        // 打符录制视频测试程序
+│   ├── camera_detect_test.cpp    // 识别器测试程序（工业相机）
+│   ├── camera_test.cpp           // 相机测试程序
+│   ├── camera_thread_test.cpp    // 相机线程测试程序
+│   ├── cboard_test.cpp           // C板测试程序
+│   ├── detector_video_test.cpp   // 识别器测试程序（视频）
+│   ├── dm_test.cpp               // 达妙IMU测试程序
+│   ├── fire_test.cpp             // 开火测试程序
+│   ├── gimbal_response_test.cpp  // 云台响应测试程序
+│   ├── gimbal_test.cpp           // 云台通信测试程序
+│   ├── handeye_test.cpp          // 手眼标定测试程序
+│   ├── minimum_vision_system.cpp // 最小视觉系统测试程序
+│   ├── multi_usbcamera_test.cpp  // 多USB摄像头测试程序
+│   ├── planner_test_offline.cpp  // 规划器测试程序（离线）
+│   ├── planner_test.cpp          // 规划器测试程序（实车）
+│   ├── publish_test.cpp          // ROS发送测试程序
+│   ├── subscribe_test.cpp        // ROS接收测试程序
+│   ├── topic_loop_test.cpp       // ROS话题循环测试程序
+│   ├── usbcamera_detect_test.cpp // 识别器测试程序（USB相机）
+│   ├── usbcamera_test.cpp        // USB相机测试程序
+│   └── ...
+└── tools          // 工具层，见3.4软件架构
+    ├── crc.hpp                    // CRC校验
+    ├── exiter.hpp                 // 退出检测
+    ├── extended_kalman_filter.hpp // 扩展卡尔曼滤波器
+    ├── img_tools.hpp              // 图像处理工具
+    ├── logger.hpp                 // 日志记录器
+    ├── math_tools.hpp             // 数学工具
+    ├── plotter.hpp                // 曲线图绘制工具
+    ├── recorder.hpp               // 视频录制器
+    ├── thread_safe_queue.hpp      // 线程安全队列
+    ├── trajectory.hpp             // 弹道解算
+    ├── yaml.hpp                   // YAML配置文件解析器
+    └── ...
+</code></pre>
+<h2 id="1相关测试程序"><a class="header" href="#1相关测试程序">1.相关测试程序</a></h2>
+<h3 id="1cboard_cboard_test硬件通信测试程序后续会改名字"><a class="header" href="#1cboard_cboard_test硬件通信测试程序后续会改名字">1.Cboard_cboard_test硬件通信测试程序（后续会改名字）</a></h3>
+<h4 id="1can口通信测试需在cboardcpp中默认初始化socketcan的实例在yaml文件配置canid"><a class="header" href="#1can口通信测试需在cboardcpp中默认初始化socketcan的实例在yaml文件配置canid">1.Can口通信测试，需在Cboard.cpp中默认初始化SocketCAN的实例，在yaml文件配置canid</a></h4>
+<h4 id="2串口通信测试"><a class="header" href="#2串口通信测试">2.串口通信测试</a></h4>
+<h2 id="2标定"><a class="header" href="#2标定">2.标定</a></h2>
+<h2 id="3相机连接"><a class="header" href="#3相机连接">3.相机连接</a></h2>
+<h2 id="4硬件通信"><a class="header" href="#4硬件通信">4.硬件通信</a></h2>
+<h2 id="5自瞄代码运行"><a class="header" href="#5自瞄代码运行">5.自瞄代码运行</a></h2>
+<h2 id="6调试问题"><a class="header" href="#6调试问题">6.调试问题</a></h2>
+<h3 id="1026"><a class="header" href="#1026">10.26</a></h3>
+<h4 id="1修复无开火指令问题上位机给下位机发的是角度获取的云台姿态来源于陀螺仪是弧度修改后可正常发送"><a class="header" href="#1修复无开火指令问题上位机给下位机发的是角度获取的云台姿态来源于陀螺仪是弧度修改后可正常发送">1.修复无开火指令问题：上位机给下位机发的是角度，获取的云台姿态来源于陀螺仪，是弧度，修改后可正常发送</a></h4>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../task/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../auto_aim/MiniPC.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../coding/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -230,13 +262,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../task/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../auto_aim/MiniPC.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../coding/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
