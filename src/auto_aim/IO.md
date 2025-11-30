@@ -1,7 +1,7 @@
 # 硬件IO通信相关问题
 
 ## 11.10 串口无权限问题
-```
+```text
 [2025-11-10 20:33:16.928] [error] [Gimbal] Failed to open serial: IO Exception (13): Permission denied, file /home/ma/code/MA_2026/io/serial/src/impl/unix.cc, line 151.
 ```
 ***解决方案***
