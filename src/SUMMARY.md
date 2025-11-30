@@ -33,3 +33,10 @@
     - [建图定位感知](sentry/map.md)
     - [路径规划](sentry/path-planning.md)
     - [决策](sentry/decision.md)
+
+# 视觉
+- [自瞄](auto_aim/README.md)
+    - [硬件IO](auto_aim/IO.md)
+    - [MiniPC](auto_aim/MiniPC.md)
+    - [视觉算法](auto_aim/vision.md)
+  
