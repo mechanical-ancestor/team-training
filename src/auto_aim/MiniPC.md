@@ -14,11 +14,14 @@
 
 #### 1.初步判断是由于云台抖动导致网线松了，插拔之后可连接SSH，但RDP服务器无法连接
 
-### 解决方案
+### 解决方案(无用)
 ```bash
 sudo apt update
 sudo apt install xrdp -y
 sudo systemctl enable xrdp
 ```
 ***暂无***
+
+
+
 
