@@ -35,10 +35,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-1b44f622.js";
+            window.path_to_searchindex_js = "../searchindex-5bdcdded.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-ad087096.js"></script>
+        <script src="../toc-fd83e26a.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -245,7 +245,34 @@
 <h2 id="5自瞄代码运行"><a class="header" href="#5自瞄代码运行">5.自瞄代码运行</a></h2>
 <h2 id="6调试问题"><a class="header" href="#6调试问题">6.调试问题</a></h2>
 <h3 id="1026"><a class="header" href="#1026">10.26</a></h3>
-<h4 id="1修复无开火指令问题上位机给下位机发的是角度获取的云台姿态来源于陀螺仪是弧度修改后可正常发送"><a class="header" href="#1修复无开火指令问题上位机给下位机发的是角度获取的云台姿态来源于陀螺仪是弧度修改后可正常发送">1.修复无开火指令问题：上位机给下位机发的是角度，获取的云台姿态来源于陀螺仪，是弧度，修改后可正常发送</a></h4>
+<h4 id="1"><a class="header" href="#1">1.</a></h4>
+<p>修复无开火指令问题：上位机给下位机发的是角度，获取的云台姿态来源于陀螺仪，是弧度，修改后可正常发送</p>
+<h3 id="11-12月"><a class="header" href="#11-12月">11-12月</a></h3>
+<h4 id="1-1"><a class="header" href="#1-1">1.</a></h4>
+<p>新增前哨站算法，修改卡尔曼滤波部分，利用矩阵的l和h两个维度作为前哨站两个不同高低差，雅可比矩阵增加dz_dl,dz_dh,扩展卡尔曼会自适应不同高低差变化</p>
+<h4 id="2"><a class="header" href="#2">2.</a></h4>
+<p>删除同济冗余代码，ROS2,多线程，多余测试等，修复一些warning警告问题，如数据类型不统一等</p>
+<h4 id="3"><a class="header" href="#3">3.</a></h4>
+<p>增加哨兵脱锁算法，目前置于Cboard.cpp中，当锁定一帧目标时脱锁会延迟3秒后再进入扫描模式</p>
+<h4 id="4"><a class="header" href="#4">4.</a></h4>
+<p>修改crc高地位，适应电控校验数据</p>
+<h4 id="5"><a class="header" href="#5">5.</a></h4>
+<p>问题：目前已测试GPU推理加速在Y7000p中，效果不如cpu，暂未查询到原因，准备更改OPENVINIO为ORT</p>
+<h4 id="6"><a class="header" href="#6">6.</a></h4>
+<p>使用SSH连接远程终端时，跑无debug程序终止原因是因为在yolo识别部分有imshow，目前已注释</p>
+<h3 id="20261"><a class="header" href="#20261">2026.1</a></h3>
+<h4 id="1-2"><a class="header" href="#1-2">1.</a></h4>
+<p>由于受灯光影响，网络模型会误识别强光部分为目标，只能降低曝光或者设置多次识别</p>
+<h3 id="2026完整形态与联盟赛"><a class="header" href="#2026完整形态与联盟赛">2026完整形态与联盟赛</a></h3>
+<p>1.电脑的降压模块不稳定，无法发挥电脑的最高性能导致代码帧率较低，与电控降压有关</p>
+<p>2.openvino可安装25版本或者24版本，但安装新版本需要修改CMakeLists，如果没修改会报找不到libopnvino的错误</p>
+<p>3.修改了识别友军的bug，统一了io，armor，main，main_debug的装甲板颜色数据类型，误识别友军的原因是因为使用了yolov5模型，使用v8可以解决</p>
+<p>4.修改CMakeLists的编译模式，Debug改为Realse，提高代码性能</p>
+<p>5.联盟赛对于远距离目标弹道偏下，对于近距离目标快速小陀螺无开火建议，目前未解决</p>
+<p>6.对于新前哨战，除了需要修改Target部分，还需要在Tracker模块中给步兵整车状态的Q矩阵的l和h维度给予参数，否则无效</p>
+<p>7.同济代码的选板目前有跳板问题导致yaw角度突变严重，目前未解决，发现观测的整车旋转角速度不稳定，有2rad的波动，不准确，目前未解决</p>
+<p>8.24版本的ubuntu有远程连接不上的问题，换22版本可以解决，22版本RDP连接秘密重启会改变，修改电脑对于登陆的密钥为空可以解决，记得不是RDP秘密为空</p>
+<p>9.电脑的USB2.0口连接相机会导致读取相机帧率很低，导致给下位机发送延迟高达40ms，改用USB3.0口可以解决</p>
 
                     </main>
 
