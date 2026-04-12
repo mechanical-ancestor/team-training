@@ -11,7 +11,7 @@ KERNEL=="ttyACM*|ttyUSB*", MODE="0660", TAG+="uaccess"
 
 > [!WARNING]
 > - 上述规则只适用于基于systemd的系统
-> - 只有序号在73之前的rules添加的`uaccess`标签[才有效](https://wiki.archlinux.org/title/Udev#Allowing_regular_users_to_use_devices)
+> - 只有序号在73之前的rules添加的`uaccess`标签[才有效](https://github.com/systemd/systemd/issues/4288#issuecomment-348166161)
 
 ## 基于usb总线的串口设备命名
 如果有多个串口设备, 例如导航串口和视觉串口,
