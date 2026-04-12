@@ -27,6 +27,8 @@
         - [ubuntu安装](linux/ubuntu/install/README.md)
         - [ubuntu环境配置](linux/ubuntu/ubuntu_environment.md)
         - [brltty](linux/ubuntu/serial/brltty.md)
+    - [udev](linux/udev/README.md)
+        - [serial](linux/udev/serial.md)
 
 # 导航
 - [导航](sentry/README.md)
@@ -39,4 +41,4 @@
     - [硬件IO](auto_aim/IO.md)
     - [MiniPC](auto_aim/MiniPC.md)
     - [视觉算法](auto_aim/vision.md)
-  
+
